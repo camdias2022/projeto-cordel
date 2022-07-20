@@ -39,6 +39,7 @@ header > h1 {
 
 header > p {
     padding-bottom: 50px;
+    font-size: 3vw;
 }
 
 a { /*ou header a, footer a*/
@@ -65,12 +66,18 @@ section {
     padding-left: 30px;
     font-family: var(--fonte3);
     /*font-size: 1.5em;*/
-    font-size: 4vw;
+    font-size: 4vw; /*o tamanho da fonte será de acordo com a largura da tela*/
+}
+
+section > p {
+    padding-bottom: 1em;
 }
 
 section.imagem {
     background-color: rgb(51, 51, 51);
     color: white;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 section.imagem > p {/*para melhor visualização por causa da imagem de fundo é    
@@ -78,6 +85,15 @@ section.imagem > p {/*para melhor visualização por causa da imagem de fundo é
     background-color: rgba(0, 0, 0, 0.253);
     display: inline-block; /*a caixa se adapta ao tamanho do conteúdo, tanto aumentando quanto diminuindo a largura da tela*/
     padding: 15px;
+}
+
+section#img01 {
+    background-image: url('imagens/background001.jpg');
+    background-position: right center;
+}
+
+section#img02 {
+    background-image: url('imagens/background002.jpg');
 }
 
 footer {
