@@ -1,13 +1,25 @@
 @charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2? family= Passion+One & display=swap');
+
+@import url('https://fonts.googleapis.com/css2? family= Sriracha & display=swap');
+
+:root {
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Passion One', cursiva;
+    --fonte3: 'Sriracha', cursiva;
+}
+
 * {/*configuração geral (para todos os componentes)*/
     margin: 0px;
     padding: 0px;
+    font-size: 1em;
 }
 
 html, body {
     min-height: 100vh; /*altura mínima: 100% da view port*/
     /*background-color: darkgray;*/
+    /*font-family: var(--fonte1);*/
 }
 
 header {
@@ -20,7 +32,9 @@ header > h1 {
     padding-top: 50px;
     /*text-transform: uppercase; transforma tudo para maiúsculo*/
     font-variant: small-caps; /*transforma tudo para maiúsculo sendo as letras iniciais maiores*/
-    font-size: 70px;
+    /*font-size: 4em;*/
+    font-size: 6vw; /*para a fonte ir diminuindo ou amentando de tamanho de acordo com a largura da tela*/
+    font-family: var(--fonte1);
 }
 
 header > p {
@@ -47,8 +61,11 @@ section.normal {
 section {
     padding-top: 10vh;
     padding-bottom: 10vh;
-    line-height: 2em; /*espaçamento duplo entre as linhas*/
+    line-height: 1.5em; /*espaçamento duplo entre as linhas*/
     padding-left: 30px;
+    font-family: var(--fonte3);
+    /*font-size: 1.5em;*/
+    font-size: 4vw;
 }
 
 section.imagem {
@@ -59,7 +76,8 @@ section.imagem {
 section.imagem > p {/*para melhor visualização por causa da imagem de fundo é    
                       melhor colocar uma caixa envelopando o conteúdo do páragrafo das seções que irão conter a referida imagem*/
     background-color: rgba(0, 0, 0, 0.253);
-    width: 400px;
+    display: inline-block; /*a caixa se adapta ao tamanho do conteúdo, tanto aumentando quanto diminuindo a largura da tela*/
+    padding: 15px;
 }
 
 footer {
